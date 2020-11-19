@@ -56,7 +56,7 @@ static int __init demo_init(void)
         return ret;
     }
 
-    ret = cdev_add(&demo_dev.cdev,dev_no,1);
+    ret = cdev_add(&demo_dev.cdev,dev_no,0);
     if (ret < 0 ){
         printk(KERN_ERR "cdev add failed\n");
         unregister_chrdev_region(dev_no,1);
