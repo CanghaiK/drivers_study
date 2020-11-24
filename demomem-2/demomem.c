@@ -2,6 +2,7 @@
 #include <linux/module.h>
 #include <linux/cdev.h>
 #include <linux/fs.h>
+#include <linux/device.h>
 
 
 #define BUF_SIZE        1024
@@ -11,6 +12,8 @@
 struct demo_device {
     char buffer[BUF_SIZE];
     struct cdev cdev;
+    struct class *cls;
+    struct device *device;
 };
 
 static struct demo_device demo_dev;
@@ -53,18 +56,47 @@ static int __init demo_init(void)
     //register device number
     ret = register_chrdev_region(dev_no,1,"demomem"); 
     if (ret < 0){
-        printk(KERN_ERR "failed t oregister device number \r\n");
-        return ret;
-    }
+        ret = alloc_chrdev_region(&dev_no,0,1,"demomem");
+        if(ret < 0){
+            printk(KERN_ERR "failed t oregister device number \r\n");
+            goto ERROR_CHARDEV_REGION;
+        }
 
+    }
+    //add char_dev to the operating system
     ret = cdev_add(&demo_dev.cdev,dev_no,1);
     if (ret < 0 ){
         printk(KERN_ERR "cdev add failed\n");
-        unregister_chrdev_region(dev_no,1);
-        return ret;
+        goto ERROR_CDEV_ADD;
     }
+
+    //create a demomem class in /sys/class/demo/
+    demo_dev.cls = class_create(THIS_MODULE,"demo");
+    if(IS_ERR(demo_dev.cls)){
+        ret = PTR_ERR(demo_dev.cls);
+        goto ERROR_CLASS_CREATE;
+    }
+
+    //creat a demomem device in /sys/class/demo/demomem
+    demo_dev.device = device_create(demo_dev.cls,NULL,
+            dev_no,NULL,"demomem");
+    if(IS_ERR(demo_dev.device)){
+        ret = PTR_ERR(demo_dev.device);
+        goto ERROR_DEVICE_CREATE;
+    }
+    
     printk(KERN_INFO "Enter %s\n",__func__);
     return 0;
+
+ERROR_DEVICE_CREATE:
+    class_destroy(demo_dev.cls);
+ERROR_CLASS_CREATE:
+    cdev_del(&demo_dev.cdev);   
+ERROR_CDEV_ADD:
+    unregister_chrdev_region(dev_no,1);
+    return ret;
+ERROR_CHARDEV_REGION:
+    return ret;
 }
 
 static void __exit demo_exit(void)
@@ -79,4 +111,6 @@ module_init(demo_init);
 module_exit(demo_exit);
 
 MODULE_AUTHOR("zhangzhen");
-//MODLUE_LICENSE("GPL");
+MODULE_LICENSE("GPL");
+
+
