@@ -194,6 +194,8 @@ ERROR_MALLOC_DEVICE:
 
 static void __exit demo_exit(void)
 {
+    device_destory(demo->cls,MKDEV(MAJOR_NUM,MINOR_NUM));
+    class_destroy(demo_dev->cls);
     cdev_del(&demo_dev->cdev);
     unregister_chrdev_region(MKDEV(MAJOR_NUM,MINOR_NUM),1);
 
