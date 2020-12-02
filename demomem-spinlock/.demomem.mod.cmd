@@ -1,0 +1,1 @@
+cmd_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-spinlock/demomem.mod := { echo  /home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-spinlock/demomem.o; echo; } > /home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-spinlock/demomem.mod
