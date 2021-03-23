@@ -1,0 +1,1 @@
+cmd_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-waitqueue/demomem.mod := { echo  /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-waitqueue/demomem.o;  echo; } > /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-waitqueue/demomem.mod

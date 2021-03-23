@@ -1,16 +1,16 @@
-cmd_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o := gcc -Wp,-MD,/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/.demomem.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/9/include  -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -include ./include/linux/compiler_types.h -D__KERNEL__ -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 --param=allow-store-data-races=0 -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -Wimplicit-fallthrough -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -flive-patching=inline-clone -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -fmacro-prefix-map=./= -fcf-protection=none -Wno-packed-not-aligned  -DMODULE  -DKBUILD_BASENAME='"demomem"' -DKBUILD_MODNAME='"demomem"' -c -o /home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o /home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.c
+cmd_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o := gcc -Wp,-MMD,/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/.demomem.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/9/include  -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -include ./include/linux/compiler_types.h -D__KERNEL__ -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE -Werror=implicit-function-declaration -Werror=implicit-int -Wno-format-security -std=gnu89 -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -DCONFIG_X86_X32_ABI -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-address-of-packed-member -O2 --param=allow-store-data-races=0 -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -Wimplicit-fallthrough -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mrecord-mcount -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wvla -Wno-pointer-sign -Wno-stringop-truncation -Wno-array-bounds -Wno-stringop-overflow -Wno-restrict -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -fmacro-prefix-map=./= -fcf-protection=none -Wno-packed-not-aligned  -DMODULE  -DKBUILD_BASENAME='"demomem"' -DKBUILD_MODNAME='"demomem"' -c -o /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.c
 
-source_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o := /home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.c
+source_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o := /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.c
 
-deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o := \
+deps_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o := \
   include/linux/kconfig.h \
+    $(wildcard include/config/cc/version/text.h) \
     $(wildcard include/config/cpu/big/endian.h) \
     $(wildcard include/config/booger.h) \
     $(wildcard include/config/foo.h) \
   include/linux/compiler_types.h \
     $(wildcard include/config/have/arch/compiler/h.h) \
     $(wildcard include/config/enable/must/check.h) \
-    $(wildcard include/config/optimize/inlining.h) \
     $(wildcard include/config/cc/has/asm/inline.h) \
   include/linux/compiler_attributes.h \
   include/linux/compiler-gcc.h \
@@ -24,25 +24,10 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/trace/branch/profiling.h) \
     $(wildcard include/config/profile/all/branches.h) \
     $(wildcard include/config/stack/validation.h) \
-    $(wildcard include/config/kasan.h) \
+    $(wildcard include/config/debug/entry.h) \
   include/linux/compiler_types.h \
-  include/uapi/linux/types.h \
-  arch/x86/include/generated/uapi/asm/types.h \
-  include/uapi/asm-generic/types.h \
-  include/asm-generic/int-ll64.h \
-  include/uapi/asm-generic/int-ll64.h \
-  arch/x86/include/uapi/asm/bitsperlong.h \
-  include/asm-generic/bitsperlong.h \
-    $(wildcard include/config/64bit.h) \
-  include/uapi/asm-generic/bitsperlong.h \
-  include/uapi/linux/posix_types.h \
-  include/linux/stddef.h \
-  include/uapi/linux/stddef.h \
-  arch/x86/include/asm/posix_types.h \
-    $(wildcard include/config/x86/32.h) \
-  arch/x86/include/uapi/asm/posix_types_64.h \
-  include/uapi/asm-generic/posix_types.h \
   arch/x86/include/asm/barrier.h \
+    $(wildcard include/config/x86/32.h) \
   arch/x86/include/asm/alternative.h \
     $(wildcard include/config/smp.h) \
   include/linux/types.h \
@@ -50,6 +35,21 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/uid16.h) \
     $(wildcard include/config/arch/dma/addr/t/64bit.h) \
     $(wildcard include/config/phys/addr/t/64bit.h) \
+    $(wildcard include/config/64bit.h) \
+  include/uapi/linux/types.h \
+  arch/x86/include/generated/uapi/asm/types.h \
+  include/uapi/asm-generic/types.h \
+  include/asm-generic/int-ll64.h \
+  include/uapi/asm-generic/int-ll64.h \
+  arch/x86/include/uapi/asm/bitsperlong.h \
+  include/asm-generic/bitsperlong.h \
+  include/uapi/asm-generic/bitsperlong.h \
+  include/uapi/linux/posix_types.h \
+  include/linux/stddef.h \
+  include/uapi/linux/stddef.h \
+  arch/x86/include/asm/posix_types.h \
+  arch/x86/include/uapi/asm/posix_types_64.h \
+  include/uapi/asm-generic/posix_types.h \
   include/linux/stringify.h \
   arch/x86/include/asm/asm.h \
   arch/x86/include/asm/nops.h \
@@ -58,6 +58,10 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/x86/64.h) \
   include/asm-generic/barrier.h \
   include/linux/kasan-checks.h \
+    $(wildcard include/config/kasan.h) \
+  include/linux/kcsan-checks.h \
+    $(wildcard include/config/kcsan.h) \
+    $(wildcard include/config/kcsan/ignore/atomics.h) \
   include/linux/module.h \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/sysfs.h) \
@@ -74,6 +78,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/event/tracing.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
+    $(wildcard include/config/kprobes.h) \
     $(wildcard include/config/module/unload.h) \
     $(wildcard include/config/constructors.h) \
     $(wildcard include/config/function/error/injection.h) \
@@ -83,18 +88,20 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/illegal/pointer/value.h) \
     $(wildcard include/config/page/poisoning/zero.h) \
   include/linux/const.h \
+  include/vdso/const.h \
   include/uapi/linux/const.h \
   include/linux/kernel.h \
     $(wildcard include/config/preempt/voluntary.h) \
     $(wildcard include/config/debug/atomic/sleep.h) \
+    $(wildcard include/config/preempt/rt.h) \
     $(wildcard include/config/mmu.h) \
     $(wildcard include/config/prove/locking.h) \
-    $(wildcard include/config/arch/has/refcount.h) \
     $(wildcard include/config/panic/timeout.h) \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
   include/linux/limits.h \
   include/uapi/linux/limits.h \
+  include/vdso/limits.h \
   include/linux/linkage.h \
+    $(wildcard include/config/arch/use/sym/annotations.h) \
   include/linux/export.h \
     $(wildcard include/config/modversions.h) \
     $(wildcard include/config/module/rel/crcs.h) \
@@ -103,6 +110,8 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/x86/alignment/16.h) \
   include/linux/bitops.h \
   include/linux/bits.h \
+  include/vdso/bits.h \
+  include/linux/build_bug.h \
   arch/x86/include/asm/bitops.h \
     $(wildcard include/config/x86/cmov.h) \
   arch/x86/include/asm/rmwcc.h \
@@ -121,14 +130,16 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/matom.h) \
     $(wildcard include/config/paravirt.h) \
   arch/x86/include/asm/disabled-features.h \
-    $(wildcard include/config/x86/intel/mpx.h) \
     $(wildcard include/config/x86/smap.h) \
-    $(wildcard include/config/x86/intel/umip.h) \
+    $(wildcard include/config/x86/umip.h) \
     $(wildcard include/config/x86/intel/memory/protection/keys.h) \
     $(wildcard include/config/x86/5level.h) \
     $(wildcard include/config/page/table/isolation.h) \
   include/asm-generic/bitops/const_hweight.h \
-  include/asm-generic/bitops-instrumented.h \
+  include/asm-generic/bitops/instrumented-atomic.h \
+  include/linux/instrumented.h \
+  include/asm-generic/bitops/instrumented-non-atomic.h \
+  include/asm-generic/bitops/instrumented-lock.h \
   include/asm-generic/bitops/le.h \
   arch/x86/include/uapi/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
@@ -151,6 +162,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/printk.h) \
     $(wildcard include/config/kmsg/ids.h) \
     $(wildcard include/config/dynamic/debug.h) \
+    $(wildcard include/config/dynamic/debug/core.h) \
   include/linux/kern_levels.h \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
@@ -164,7 +176,6 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/linux/jump_label.h \
     $(wildcard include/config/have/arch/jump/label/relative.h) \
   arch/x86/include/asm/jump_label.h \
-  include/linux/build_bug.h \
   arch/x86/include/asm/div64.h \
   include/asm-generic/div64.h \
   include/linux/stat.h \
@@ -172,6 +183,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/uapi/linux/stat.h \
   include/linux/time.h \
     $(wildcard include/config/arch/uses/gettimeoffset.h) \
+    $(wildcard include/config/posix/timers.h) \
   include/linux/seqlock.h \
     $(wildcard include/config/debug/lock/alloc.h) \
   include/linux/spinlock.h \
@@ -208,11 +220,14 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/linux/time64.h \
   include/linux/math64.h \
     $(wildcard include/config/arch/supports/int128.h) \
+  include/vdso/math64.h \
+  include/vdso/time64.h \
   include/uapi/linux/time.h \
   include/uapi/linux/time_types.h \
   arch/x86/include/asm/current.h \
   arch/x86/include/asm/thread_info.h \
     $(wildcard include/config/vm86.h) \
+    $(wildcard include/config/x86/iopl/ioperm.h) \
     $(wildcard include/config/frame/pointer.h) \
     $(wildcard include/config/compat.h) \
     $(wildcard include/config/ia32/emulation.h) \
@@ -259,6 +274,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   arch/x86/include/asm/cpufeature.h \
     $(wildcard include/config/x86/feature/names.h) \
   arch/x86/include/asm/processor.h \
+    $(wildcard include/config/x86/vmx/feature/names.h) \
     $(wildcard include/config/kvm.h) \
     $(wildcard include/config/stackprotector.h) \
     $(wildcard include/config/paravirt/xxl.h) \
@@ -283,16 +299,18 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/asm-generic/kmap_types.h \
   arch/x86/include/asm/pgtable_types.h \
     $(wildcard include/config/mem/soft/dirty.h) \
+    $(wildcard include/config/have/arch/userfaultfd/wp.h) \
     $(wildcard include/config/proc/fs.h) \
   arch/x86/include/asm/pgtable_64_types.h \
   arch/x86/include/asm/sparsemem.h \
-  include/asm-generic/pgtable-nop4d.h \
   arch/x86/include/asm/nospec-branch.h \
   include/linux/static_key.h \
+  include/linux/frame.h \
   arch/x86/include/asm/alternative-asm.h \
   arch/x86/include/asm/msr-index.h \
+  arch/x86/include/asm/unwind_hints.h \
+  arch/x86/include/asm/orc_types.h \
   arch/x86/include/asm/spinlock_types.h \
-    $(wildcard include/config/paravirt/spinlocks.h) \
   include/asm-generic/qspinlock_types.h \
   include/asm-generic/qrwlock_types.h \
   arch/x86/include/uapi/asm/sigcontext.h \
@@ -313,41 +331,42 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/uapi/linux/string.h \
   arch/x86/include/asm/string.h \
   arch/x86/include/asm/string_64.h \
-    $(wildcard include/config/x86/mce.h) \
     $(wildcard include/config/arch/has/uaccess/flushcache.h) \
   include/linux/atomic.h \
   arch/x86/include/asm/atomic.h \
   arch/x86/include/asm/cmpxchg.h \
   arch/x86/include/asm/cmpxchg_64.h \
   arch/x86/include/asm/atomic64_64.h \
-  include/asm-generic/atomic-instrumented.h \
-  include/linux/atomic-fallback.h \
+  include/linux/atomic-arch-fallback.h \
     $(wildcard include/config/generic/atomic64.h) \
+  include/asm-generic/atomic-instrumented.h \
   include/asm-generic/atomic-long.h \
   arch/x86/include/uapi/asm/msr.h \
   include/linux/tracepoint-defs.h \
   arch/x86/include/asm/paravirt.h \
-    $(wildcard include/config/debug/entry.h) \
+    $(wildcard include/config/paravirt/spinlocks.h) \
   arch/x86/include/asm/frame.h \
   arch/x86/include/asm/special_insns.h \
-  arch/x86/include/asm/fpu/types.h \
-  arch/x86/include/asm/unwind_hints.h \
-  arch/x86/include/asm/orc_types.h \
-  include/linux/personality.h \
-  include/uapi/linux/personality.h \
-  include/linux/err.h \
   include/linux/irqflags.h \
     $(wildcard include/config/trace/irqflags.h) \
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   arch/x86/include/asm/irqflags.h \
+  arch/x86/include/asm/fpu/types.h \
+  arch/x86/include/asm/vmxfeatures.h \
+  arch/x86/include/asm/vdso/processor.h \
+  include/linux/personality.h \
+  include/uapi/linux/personality.h \
+  include/linux/err.h \
   include/linux/bottom_half.h \
   arch/x86/include/generated/asm/mmiowb.h \
   include/asm-generic/mmiowb.h \
     $(wildcard include/config/mmiowb.h) \
   include/linux/spinlock_types.h \
   include/linux/lockdep.h \
+    $(wildcard include/config/prove/raw/lock/nesting.h) \
+    $(wildcard include/config/preempt/lock.h) \
     $(wildcard include/config/lockdep.h) \
     $(wildcard include/config/lock/stat.h) \
   include/linux/rwlock_types.h \
@@ -400,6 +419,8 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   arch/x86/include/asm/timex.h \
   arch/x86/include/asm/tsc.h \
     $(wildcard include/config/x86/tsc.h) \
+  include/vdso/time32.h \
+  include/vdso/time.h \
   include/linux/uidgid.h \
     $(wildcard include/config/multiuser.h) \
     $(wildcard include/config/user/ns.h) \
@@ -421,7 +442,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/linux/mmzone.h \
     $(wildcard include/config/force/max/zoneorder.h) \
     $(wildcard include/config/memory/isolation.h) \
-    $(wildcard include/config/shuffle/page/allocator.h) \
+    $(wildcard include/config/shadow/call/stack.h) \
     $(wildcard include/config/zsmalloc.h) \
     $(wildcard include/config/memcg.h) \
     $(wildcard include/config/memory/hotplug.h) \
@@ -432,9 +453,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/deferred/struct/page/init.h) \
     $(wildcard include/config/have/memory/present.h) \
     $(wildcard include/config/have/memoryless/nodes.h) \
-    $(wildcard include/config/have/memblock/node/map.h) \
     $(wildcard include/config/need/multiple/nodes.h) \
-    $(wildcard include/config/have/arch/early/pfn/to/nid.h) \
     $(wildcard include/config/sparsemem/extreme.h) \
     $(wildcard include/config/memory/hotremove.h) \
     $(wildcard include/config/have/arch/pfn/valid.h) \
@@ -444,6 +463,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/uapi/linux/wait.h \
   include/linux/numa.h \
     $(wildcard include/config/nodes/shift.h) \
+    $(wildcard include/config/numa/keep/meminfo.h) \
   include/linux/nodemask.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page.h) \
@@ -474,7 +494,10 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/rcu/stall/common.h) \
     $(wildcard include/config/no/hz/full.h) \
     $(wildcard include/config/rcu/nocb/cpu.h) \
+    $(wildcard include/config/tasks/rcu/generic.h) \
     $(wildcard include/config/tasks/rcu.h) \
+    $(wildcard include/config/tasks/rcu/trace.h) \
+    $(wildcard include/config/tasks/rude/rcu.h) \
     $(wildcard include/config/tree/rcu.h) \
     $(wildcard include/config/tiny/rcu.h) \
     $(wildcard include/config/debug/objects/rcu/head.h) \
@@ -487,6 +510,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/debug/rwsems.h) \
   include/linux/osq_lock.h \
   include/linux/completion.h \
+  include/linux/swait.h \
   include/linux/uprobes.h \
     $(wildcard include/config/uprobes.h) \
   include/linux/errno.h \
@@ -507,11 +531,12 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/wq/watchdog.h) \
   include/linux/timer.h \
     $(wildcard include/config/debug/objects/timers.h) \
-    $(wildcard include/config/preempt/rt.h) \
     $(wildcard include/config/no/hz/common.h) \
   include/linux/ktime.h \
   include/linux/jiffies.h \
+  include/vdso/jiffies.h \
   include/generated/timeconst.h \
+  include/vdso/ktime.h \
   include/linux/timekeeping.h \
   include/linux/timekeeping32.h \
   include/linux/debugobjects.h \
@@ -564,30 +589,6 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   arch/x86/include/asm/topology.h \
     $(wildcard include/config/sched/mc/prio.h) \
   include/asm-generic/topology.h \
-  arch/x86/include/asm/realmode.h \
-    $(wildcard include/config/acpi/sleep.h) \
-  arch/x86/include/asm/io.h \
-    $(wildcard include/config/mtrr.h) \
-    $(wildcard include/config/x86/pat.h) \
-  arch/x86/include/generated/asm/early_ioremap.h \
-  include/asm-generic/early_ioremap.h \
-    $(wildcard include/config/generic/early/ioremap.h) \
-  include/asm-generic/iomap.h \
-    $(wildcard include/config/has/ioport/map.h) \
-    $(wildcard include/config/pci.h) \
-    $(wildcard include/config/generic/iomap.h) \
-  include/asm-generic/pci_iomap.h \
-    $(wildcard include/config/no/generic/pci/ioport/map.h) \
-    $(wildcard include/config/generic/pci/iomap.h) \
-  include/asm-generic/io.h \
-    $(wildcard include/config/virt/to/bus.h) \
-  include/linux/logic_pio.h \
-    $(wildcard include/config/indirect/pio.h) \
-  include/linux/fwnode.h \
-  include/linux/vmalloc.h \
-  include/linux/llist.h \
-    $(wildcard include/config/arch/have/nmi/safe/cmpxchg.h) \
-  include/linux/overflow.h \
   arch/x86/include/uapi/asm/vsyscall.h \
   include/asm-generic/fixmap.h \
   arch/x86/include/asm/hardirq.h \
@@ -611,10 +612,15 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
   include/linux/smp.h \
     $(wildcard include/config/up/late/init.h) \
+  include/linux/smp_types.h \
+  include/linux/llist.h \
+    $(wildcard include/config/arch/have/nmi/safe/cmpxchg.h) \
   include/linux/sysctl.h \
     $(wildcard include/config/sysctl.h) \
   include/uapi/linux/sysctl.h \
   include/linux/elf.h \
+    $(wildcard include/config/arch/use/gnu/property.h) \
+    $(wildcard include/config/arch/have/elf/prot.h) \
   arch/x86/include/asm/elf.h \
     $(wildcard include/config/x86/x32/abi.h) \
   arch/x86/include/asm/user.h \
@@ -638,8 +644,6 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/linux/kobject_ns.h \
   include/linux/kref.h \
   include/linux/refcount.h \
-    $(wildcard include/config/refcount/full.h) \
-  arch/x86/include/asm/refcount.h \
   include/linux/moduleparam.h \
     $(wildcard include/config/alpha.h) \
     $(wildcard include/config/ia64.h) \
@@ -649,28 +653,6 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/asm-generic/error-injection.h \
   arch/x86/include/asm/module.h \
     $(wildcard include/config/unwinder/orc.h) \
-    $(wildcard include/config/m486.h) \
-    $(wildcard include/config/m586.h) \
-    $(wildcard include/config/m586tsc.h) \
-    $(wildcard include/config/m586mmx.h) \
-    $(wildcard include/config/mcore2.h) \
-    $(wildcard include/config/m686.h) \
-    $(wildcard include/config/mpentiumii.h) \
-    $(wildcard include/config/mpentiumiii.h) \
-    $(wildcard include/config/mpentiumm.h) \
-    $(wildcard include/config/mpentium4.h) \
-    $(wildcard include/config/mk6.h) \
-    $(wildcard include/config/mk8.h) \
-    $(wildcard include/config/melan.h) \
-    $(wildcard include/config/mcrusoe.h) \
-    $(wildcard include/config/mefficeon.h) \
-    $(wildcard include/config/mwinchipc6.h) \
-    $(wildcard include/config/mwinchip3d.h) \
-    $(wildcard include/config/mcyrixiii.h) \
-    $(wildcard include/config/mviac3/2.h) \
-    $(wildcard include/config/mviac7.h) \
-    $(wildcard include/config/mgeodegx1.h) \
-    $(wildcard include/config/mgeode/lx.h) \
   include/asm-generic/module.h \
     $(wildcard include/config/have/mod/arch/specific.h) \
     $(wildcard include/config/modules/use/elf/rel.h) \
@@ -692,20 +674,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/of.h) \
     $(wildcard include/config/devtmpfs.h) \
     $(wildcard include/config/sysfs/deprecated.h) \
-  include/linux/ioport.h \
-    $(wildcard include/config/io/strict/devmem.h) \
-  include/linux/klist.h \
-  include/linux/pm.h \
-    $(wildcard include/config/vt/console/sleep.h) \
-    $(wildcard include/config/pm.h) \
-    $(wildcard include/config/pm/clk.h) \
-    $(wildcard include/config/pm/generic/domains.h) \
-  include/linux/hrtimer.h \
-    $(wildcard include/config/high/res/timers.h) \
-    $(wildcard include/config/time/low/res.h) \
-    $(wildcard include/config/timerfd.h) \
-  include/linux/hrtimer_defs.h \
-  include/linux/timerqueue.h \
+  include/linux/dev_printk.h \
   include/linux/ratelimit.h \
   include/linux/sched.h \
     $(wildcard include/config/virt/cpu/accounting/native.h) \
@@ -717,6 +686,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/uclamp/buckets/count.h) \
     $(wildcard include/config/cgroup/sched.h) \
     $(wildcard include/config/blk/dev/io/trace.h) \
+    $(wildcard include/config/tasks/trace/rcu.h) \
     $(wildcard include/config/psi.h) \
     $(wildcard include/config/compat/brk.h) \
     $(wildcard include/config/cgroups.h) \
@@ -727,6 +697,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/keys.h) \
     $(wildcard include/config/sysvipc.h) \
     $(wildcard include/config/detect/hung/task.h) \
+    $(wildcard include/config/io/uring.h) \
     $(wildcard include/config/audit.h) \
     $(wildcard include/config/auditsyscall.h) \
     $(wildcard include/config/rt/mutexes.h) \
@@ -747,6 +718,7 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/vmap/stack.h) \
     $(wildcard include/config/security.h) \
     $(wildcard include/config/gcc/plugin/stackleak.h) \
+    $(wildcard include/config/x86/mce.h) \
     $(wildcard include/config/arch/task/struct/on/stack.h) \
     $(wildcard include/config/debug/rseq.h) \
   include/uapi/linux/sched.h \
@@ -771,6 +743,12 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/uapi/linux/kcov.h \
   include/linux/plist.h \
     $(wildcard include/config/debug/plist.h) \
+  include/linux/hrtimer.h \
+    $(wildcard include/config/high/res/timers.h) \
+    $(wildcard include/config/time/low/res.h) \
+    $(wildcard include/config/timerfd.h) \
+  include/linux/hrtimer_defs.h \
+  include/linux/timerqueue.h \
   include/linux/seccomp.h \
     $(wildcard include/config/seccomp.h) \
     $(wildcard include/config/have/arch/seccomp/filter.h) \
@@ -782,8 +760,8 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   arch/x86/include/uapi/asm/unistd.h \
   arch/x86/include/generated/uapi/asm/unistd_64.h \
   arch/x86/include/generated/asm/unistd_64_x32.h \
-  arch/x86/include/asm/ia32_unistd.h \
   arch/x86/include/generated/asm/unistd_32_ia32.h \
+  arch/x86/include/asm/ia32_unistd.h \
   include/asm-generic/seccomp.h \
   include/uapi/linux/unistd.h \
   include/linux/resource.h \
@@ -805,15 +783,24 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/linux/task_io_accounting.h \
     $(wildcard include/config/task/io/accounting.h) \
   include/linux/posix-timers.h \
-    $(wildcard include/config/posix/timers.h) \
   include/linux/alarmtimer.h \
+    $(wildcard include/config/rtc/class.h) \
   include/uapi/linux/rseq.h \
+  include/linux/kcsan.h \
+  include/linux/ioport.h \
+    $(wildcard include/config/io/strict/devmem.h) \
+  include/linux/klist.h \
+  include/linux/pm.h \
+    $(wildcard include/config/vt/console/sleep.h) \
+    $(wildcard include/config/pm.h) \
+    $(wildcard include/config/pm/clk.h) \
+    $(wildcard include/config/pm/generic/domains.h) \
+  include/linux/overflow.h \
+  include/linux/device/bus.h \
+  include/linux/device/class.h \
+  include/linux/device/driver.h \
   arch/x86/include/asm/device.h \
-    $(wildcard include/config/intel/iommu.h) \
-    $(wildcard include/config/amd/iommu.h) \
-    $(wildcard include/config/sta2x11.h) \
-    $(wildcard include/config/x86/dev/dma/ops.h) \
-    $(wildcard include/config/pci/domains.h) \
+    $(wildcard include/config/iommu/api.h) \
   include/linux/pm_wakeup.h \
   include/linux/fs.h \
     $(wildcard include/config/read/only/thp/for/fs.h) \
@@ -830,7 +817,6 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/fs/dax.h) \
     $(wildcard include/config/mandatory/file/locking.h) \
     $(wildcard include/config/migration.h) \
-    $(wildcard include/config/io/uring.h) \
   include/linux/wait_bit.h \
   include/linux/dcache.h \
   include/linux/rculist_bl.h \
@@ -854,10 +840,41 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/uapi/linux/fcntl.h \
   arch/x86/include/generated/uapi/asm/fcntl.h \
   include/uapi/asm-generic/fcntl.h \
-  include/uapi/linux/fiemap.h \
+  include/uapi/linux/openat2.h \
   include/linux/migrate_mode.h \
   include/linux/percpu-rwsem.h \
   include/linux/rcuwait.h \
+  include/linux/sched/signal.h \
+    $(wildcard include/config/sched/autogroup.h) \
+    $(wildcard include/config/bsd/process/acct.h) \
+    $(wildcard include/config/taskstats.h) \
+    $(wildcard include/config/stack/growsup.h) \
+  include/linux/signal.h \
+  include/linux/sched/jobctl.h \
+  include/linux/sched/task.h \
+    $(wildcard include/config/have/copy/thread/tls.h) \
+    $(wildcard include/config/have/exit/thread.h) \
+    $(wildcard include/config/arch/wants/dynamic/task/struct.h) \
+    $(wildcard include/config/have/arch/thread/struct/whitelist.h) \
+  include/linux/uaccess.h \
+  arch/x86/include/asm/uaccess.h \
+    $(wildcard include/config/arch/has/copy/mc.h) \
+    $(wildcard include/config/x86/intel/usercopy.h) \
+  arch/x86/include/asm/smap.h \
+  arch/x86/include/asm/extable.h \
+  arch/x86/include/asm/uaccess_64.h \
+  include/linux/cred.h \
+    $(wildcard include/config/debug/credentials.h) \
+  include/linux/key.h \
+    $(wildcard include/config/key/notifications.h) \
+    $(wildcard include/config/net.h) \
+  include/linux/assoc_array.h \
+    $(wildcard include/config/associative/array.h) \
+  include/linux/sched/user.h \
+    $(wildcard include/config/fanotify.h) \
+    $(wildcard include/config/posix/mqueue.h) \
+    $(wildcard include/config/bpf/syscall.h) \
+    $(wildcard include/config/watch/queue.h) \
   include/linux/rcu_sync.h \
   include/linux/delayed_call.h \
   include/linux/uuid.h \
@@ -878,12 +895,6 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
   include/linux/projid.h \
   include/uapi/linux/quota.h \
   include/linux/nfs_fs_i.h \
-  include/linux/uaccess.h \
-  arch/x86/include/asm/uaccess.h \
-    $(wildcard include/config/x86/intel/usercopy.h) \
-  arch/x86/include/asm/smap.h \
-  arch/x86/include/asm/extable.h \
-  arch/x86/include/asm/uaccess_64.h \
   include/linux/slab.h \
     $(wildcard include/config/debug/slab.h) \
     $(wildcard include/config/failslab.h) \
@@ -893,9 +904,11 @@ deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demom
     $(wildcard include/config/slob.h) \
   include/linux/percpu-refcount.h \
   include/linux/kasan.h \
+    $(wildcard include/config/kasan/vmalloc.h) \
     $(wildcard include/config/kasan/generic.h) \
-  /home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.h \
+    $(wildcard include/config/kasan/inline.h) \
+  /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.h \
 
-/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o: $(deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o)
+/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o: $(deps_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o)
 
-$(deps_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o):
+$(deps_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/demomem.o):

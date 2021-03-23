@@ -5,6 +5,9 @@
 #include <linux/device.h>
 #include <linux/uaccess.h>
 #include <linux/slab.h> 
+#include <linux/miscdevice.h>
+#include <linux/wait.h>
+#include <linux/sched.h>
 
 #include "demomem.h"
 
@@ -17,9 +20,9 @@ struct demo_device {
 //    char buffer[BUF_SIZE];
     char *buffer;
     int value;
-    struct cdev cdev;
-    struct class *cls;
-    struct device *device;
+    struct miscdevice *mdev;
+    wait_queue_head_t read_q;
+    bool is_empty;
 };
 
 //static struct demo_device demo_dev;
@@ -51,6 +54,11 @@ static ssize_t demo_read(struct file *file , char __user *buf, size_t size, loff
     else
         read_bytes = size;
 
+    if(demo_dev->is_empty){
+        //make this process sleep
+        wait_event_interruptible(demo_dev->read_q,!demo_dev->is_empty);
+    }
+
     ret = copy_to_user(buf,kbuf,read_bytes);
     if(ret != 0)
         return -EFAULT;
@@ -58,6 +66,7 @@ static ssize_t demo_read(struct file *file , char __user *buf, size_t size, loff
 
     printk(KERN_INFO "Enter %s\n",__func__);
 
+    demo_dev->is_empty = true;
     return read_bytes;
 }
 static ssize_t demo_write(struct file *file, const char __user *buf , size_t size , loff_t *pos)
@@ -81,6 +90,9 @@ static ssize_t demo_write(struct file *file, const char __user *buf , size_t siz
     *pos += write_bytes;
 
     printk(KERN_INFO "Enter %s\n",__func__);
+
+    demo_dev->is_empty = false;
+    wake_up(&demo_dev->read_q);
 
     return write_bytes;
 }
@@ -117,11 +129,16 @@ static struct file_operations demo_operation = {
     .unlocked_ioctl = demo_ioctl,
 };
 
+
+static struct miscdevice misc_struct = {
+    .minor = MISC_DYNAMIC_MINOR,
+    .name = "demomem",
+    .fops = &demo_operation,
+};
+
 static int __init demo_init(void)
 {
     int ret =1 ;
-    dev_t dev_no;
-    dev_no = MKDEV(MAJOR_NUM,MINOR_NUM);
 
     demo_dev = (struct demo_device *)kmalloc(sizeof(struct demo_device),GFP_KERNEL);
     if(!demo_dev){
@@ -138,51 +155,18 @@ static int __init demo_init(void)
     }
 
     demo_dev->value = 1;
-    //init for demo char 
-    cdev_init(&demo_dev->cdev,&demo_operation);
-    //register device number
-    ret = register_chrdev_region(dev_no,1,"demomem"); 
-    if (ret < 0){
-    ret = alloc_chrdev_region(&dev_no,0,1,"demomem");
-        if(ret < 0){
-            printk(KERN_ERR "failed t oregister device number \r\n");
-            goto ERROR_CHARDEV_REGION;
-        }
-
-    }
-    //add char_dev to the operating system
-    ret = cdev_add(&demo_dev->cdev,dev_no,1);
-    if (ret < 0 ){
-        printk(KERN_ERR "cdev add failed\n");
-        goto ERROR_CDEV_ADD;
-    }
-
-    //create a demomem class in /sys/class/demo/    
-        demo_dev->cls = class_create(THIS_MODULE,"demo");
-      if(IS_ERR(demo_dev->cls)){
-          ret = PTR_ERR(demo_dev->cls);
-          goto ERROR_CLASS_CREATE;
-      }
-  
-      //creat a demomem device in /sys/class/demo/demomem
-      demo_dev->device = device_create(demo_dev->cls,NULL,
-              dev_no,NULL,"demomem");
-      if(IS_ERR(demo_dev->device)){
-          ret = PTR_ERR(demo_dev->device);
-          goto ERROR_DEVICE_CREATE;
-      }
-    
+    demo_dev->is_empty = true;
+    init_waitqueue_head(&demo_dev->read_q);
+    demo_dev->mdev = &misc_struct;
+   ret = misc_register(demo_dev->mdev); 
+   if(ret < 0){
+       printk(KERN_ERR "failed to register misc\n");
+       goto ERROR_MISC;
+   }
     printk(KERN_INFO "Enter %s\n",__func__);
     return 0;
 
-ERROR_DEVICE_CREATE:
-    class_destroy(demo_dev->cls);
-ERROR_CLASS_CREATE:
-    cdev_del(&demo_dev->cdev);   
-ERROR_CDEV_ADD:
-    unregister_chrdev_region(dev_no,1);
-    return ret;
-ERROR_CHARDEV_REGION:
+ERROR_MISC:
     kfree(demo_dev->buffer);
     demo_dev->buffer = NULL;
 ERROR_MALLOC_BUFFER:
@@ -194,10 +178,7 @@ ERROR_MALLOC_DEVICE:
 
 static void __exit demo_exit(void)
 {
-    device_destroy(demo_dev->cls,MKDEV(MAJOR_NUM,MINOR_NUM));
-    class_destroy(demo_dev->cls);
-    cdev_del(&demo_dev->cdev);
-    unregister_chrdev_region(MKDEV(MAJOR_NUM,MINOR_NUM),1);
+    misc_deregister(demo_dev->mdev);
 
     kfree(demo_dev->buffer);
     demo_dev->buffer = NULL;
@@ -212,5 +193,4 @@ module_exit(demo_exit);
 
 MODULE_AUTHOR("zhangzhen");
 MODULE_LICENSE("GPL");
-
 

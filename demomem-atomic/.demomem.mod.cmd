@@ -1,1 +1,1 @@
-cmd_/home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-atomic/demomem.mod := { echo  /home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-atomic/demomem.o; echo; } > /home/zhangzhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-atomic/demomem.mod
+cmd_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-atomic/demomem.mod := { echo  /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-atomic/demomem.o;  echo; } > /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-atomic/demomem.mod

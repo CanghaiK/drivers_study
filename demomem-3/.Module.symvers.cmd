@@ -1,0 +1,1 @@
+cmd_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/Module.symvers := sed 's/ko$$/o/' /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/modules.order | scripts/mod/modpost  -a   -o /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-3/Module.symvers -e -i Module.symvers   -T -
