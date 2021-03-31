@@ -9,6 +9,7 @@
 #include <linux/wait.h>
 #include <linux/sched.h>
 #include <linux/mutex.h>
+#include <linux/poll.h>
 
 #include "demomem.h"
 
@@ -213,6 +214,23 @@ static ssize_t demo_write(struct file *file, const char __user *buf , size_t siz
     return size;
 }
 
+static unsigned int demo_poll(struct file *file,poll_table *wait)
+{
+    unsigned int mask = 0;
+    struct demo_device *demo = (struct demo_device *)file->private_data;
+
+    poll_wait(file,&demo->inq,wait);
+    poll_wait(file,&demo->outq,wait);
+
+    if(demo->r_offset != demo->w_offset){
+        mask |= POLLIN | POLLRDNORM;
+    }else{
+        mask |= POLLOUT | POLLWRNORM;
+    }
+
+    return mask;
+}
+
 static long demo_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 {
     int ret = 0;
@@ -242,6 +260,7 @@ static struct file_operations demo_operation = {
     .release = demo_release,
     .read = demo_read,
     .write = demo_write,
+    .poll = demo_poll,
     .unlocked_ioctl = demo_ioctl,
 };
 

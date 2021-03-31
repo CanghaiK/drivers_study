@@ -909,6 +909,11 @@ deps_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-fifo/demomem
     $(wildcard include/config/kasan/inline.h) \
   include/linux/miscdevice.h \
   include/uapi/linux/major.h \
+  include/linux/poll.h \
+  include/uapi/linux/poll.h \
+  arch/x86/include/generated/uapi/asm/poll.h \
+  include/uapi/asm-generic/poll.h \
+  include/uapi/linux/eventpoll.h \
   /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-fifo/demomem.h \
 
 /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-fifo/demomem.o: $(deps_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-fifo/demomem.o)
