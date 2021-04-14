@@ -1,0 +1,1 @@
+cmd_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/workqueue/Module.symvers := sed 's/ko$$/o/' /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/workqueue/modules.order | scripts/mod/modpost -m -a   -o /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/workqueue/Module.symvers -e -i Module.symvers   -T -
