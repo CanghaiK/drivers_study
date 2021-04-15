@@ -1,1 +1,1 @@
-cmd_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-fifo/demomem.mod := { echo  /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-fifo/demomem.o;  echo; } > /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/demomem-fifo/demomem.mod
+cmd_/home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/vim_practice/demomem-fifo/demomem.mod := { echo  /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/vim_practice/demomem-fifo/demomem.o;  echo; } > /home/zhen/Downloads/linux-5.9.3/drivers/drivers_study/vim_practice/demomem-fifo/demomem.mod
